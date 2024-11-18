@@ -21,15 +21,30 @@
             <button onclick="handleSearch()" class="btn btn-accent">Search</button>
         </section>
         <section>
-            <div id="loading-spinner" class="text-center my-40 hidden"> 
+            <div id="loading-spinner" class="text-center my-40 hidden">
                 <span class="loading loading-spinner text-primary loading-lg"></span>
             </div>
             <div id="phone-container" class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             </div>
         </section>
-        <div id = "show-all" class="m-4 hidden">
-            <button class="btn btn-accent">Show All</button>
+        <div id="show-all" class="m-4 hidden text-center">
+            <button onclick="handleShowAll()" class="btn btn-accent">Show All</button>
         </div>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_detail" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show-detail-phone-name" class="text-lg font-bold"></h3>
+                <div id="show-detail-container">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <footer>
 
