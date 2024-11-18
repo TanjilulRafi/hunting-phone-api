@@ -1,4 +1,4 @@
-const loadPhone = async (search='13',isShowAll) => {
+const loadPhone = async (search,isShowAll) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${search}`);
     const data = await res.json();
     const phones = data.data
@@ -95,4 +95,3 @@ const handleShowAll = () => {
     handleSearch(true);
 }
 
-loadPhone();
